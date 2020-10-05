@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<form action="/siswa" method="POST">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nama.." name="nama">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="kelas.." name="kelas">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="hobby.." name="hobby">
+        </div>
+        <div class="col">
+            <input type="submit" value="tambah" class="btn btn-primary btn-block mb-5">
+        </div>
+    </div>
+</form>
+
+<ul class="list-group">
+    <li class="list-group-item active">Daftar Siswa</li>
+    {{#each siswa}}
+    <li class="list-group-item">{{this.nama}}</li>
+    {{/each}}
+</ul>
